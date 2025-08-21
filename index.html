@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App - Stay Updated</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-newspaper"></i>
+                <h1>NewsHub</h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-category="">All</button>
+                <button class="nav-btn" data-category="business">Business</button>
+                <button class="nav-btn" data-category="technology">Tech</button>
+                <button class="nav-btn" data-category="sports">Sports</button>
+                <button class="nav-btn" data-category="entertainment">Entertainment</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search for news articles..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading news...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error" class="error-message hidden">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p id="errorText">Something went wrong. Please try again later.</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div id="newsContainer" class="news-grid">
+                <!-- News cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NewsHub. Powered by NewsAPI.org</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
